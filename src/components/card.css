@@ -1,0 +1,31 @@
+.card-head>img {
+    border-radius: 9px;
+}
+
+.card-btn {
+    position: relative;
+    left: -170px;
+    top: -100px;
+    font-size: 10.25px;
+    font-weight: 400;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 5px 6px 4px 6px;
+}
+
+.card-text {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 110%;
+}
+
+.card-price {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 110%;
+}
+
+.card-price>span {
+    font-weight: 400;
+}
