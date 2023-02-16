@@ -1,5 +1,5 @@
 import React from "react";
-import gallery from "./../assets/Image Grid.svg";
+import gallery from "../assets/Image Grid.svg";
 
 const Hero = () => {
   return (

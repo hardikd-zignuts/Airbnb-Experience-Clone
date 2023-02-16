@@ -2,7 +2,7 @@ import './App.css';
 import Card from './components/Card';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-import person from './assets/person-1.svg'
+import data from './data';
 
 function App() {
   return (
@@ -11,38 +11,19 @@ function App() {
       <Hero />
       <div className='container'>
         <div className='d-flex flex-wrap justify-content-center align-items-center'>
-          <Card
-            img={person}
-            starCount={5.0}
-            reviewCount={6}
-            country="USA"
-            title='Life lessons with Katie Zaires'
-            price="$450"
-          />
-          <Card
-            img={person}
-            starCount={5.0}
-            reviewCount={6}
-            country="USA"
-            title='Life lessons with Katie Zaires'
-            price="$450"
-          />
-          <Card
-            img={person}
-            starCount={5.0}
-            reviewCount={6}
-            country="USA"
-            title='Life lessons with Katie Zaires'
-            price="$450"
-          />
-          <Card
-            img={person}
-            starCount={5.0}
-            reviewCount={6}
-            country="USA"
-            title='Life lessons with Katie Zaires'
-            price="$450"
-          />
+          {
+            data.map((item) => {
+              return <Card
+                img={item.coverImg}
+                key={item.id}
+                starCount={item.stats.rating}
+                reviewCount={item.stats.reviewCount}
+                country={item.location}
+                title={item.title}
+                price={item.price}
+              />
+            })
+          }
         </div>
       </div>
     </div>
